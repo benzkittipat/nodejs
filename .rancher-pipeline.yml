@@ -1,0 +1,19 @@
+stages:
+- name: Build Image
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: nodejs:${CICD_GIT_BRANCH}
+- name: Set Replica 0
+  steps:
+  - applyYamlConfig:
+      path: ./deployment_remove.yaml
+- name: Deploy yaml
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+branch:
+  include: [ dev, sit, uat, prod]
+timeout: 60
+notification: {}
