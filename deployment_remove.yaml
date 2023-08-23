@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs
+  namespace: nodejs-${CICD_GIT_BRANCH}
+spec:
+  selector:
+    matchLabels:
+      app: nodejs
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        app: nodejs
+    spec:
+      containers:
+        - name: nodejs
+          image: 127.0.0.1:34922/nodejs-template-rancher:${CICD_GIT_BRANCH}
+          imagePullPolicy: Always
+      imagePullSecrets:
+      - name: pipeline-docker-registry

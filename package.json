@@ -1,0 +1,10 @@
+{
+  "name": "nodejstest",
+  "engines": {
+    "node": "12"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1"
+  },
+  "private": true
+}
