@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: nodejs
-          image: 127.0.0.1:34922/nodejs:${CICD_GIT_BRANCH}
+          image: 127.0.0.1:34871/nodejs:${CICD_GIT_BRANCH}
           imagePullPolicy: Always
       imagePullSecrets:
       - name: pipeline-docker-registry
