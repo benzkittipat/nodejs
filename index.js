@@ -14,7 +14,15 @@ const init = async () => {
             path: '/',
             handler: function (request, h) {
 
-                return 'Hello, World!';
+                return 'Hello, DevOps Team EGAT!';
+            }
+        },
+        {
+            method: 'GET',
+            path: '/Benz',
+            handler: function (request, h) {
+
+                return Math.random();
             }
         },
         {
