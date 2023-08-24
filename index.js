@@ -19,7 +19,7 @@ const init = async () => {
         },
         {
             method: 'GET',
-            path: '/Benz',
+            path: '/Benzasdfasdf',
             handler: function (request, h) {
 
                 return Math.random();
