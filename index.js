@@ -40,6 +40,15 @@ const init = async () => {
 
                 return `The random is ${Math.random()*1000}`;
             }
+        },
+        ,
+        {
+            method: 'GET',
+            path: '/newapi',
+            handler: function (request, h) {
+
+                return `Test`;
+            }
         }
     ]);
 
