@@ -24,6 +24,14 @@ const init = async () => {
 
                 return `The random is ${Math.random()*10}`;
             }
+        },
+        {
+            method: 'GET',
+            path: '/random2',
+            handler: function (request, h) {
+
+                return `The random is ${Math.random()*100}`;
+            }
         }
     ]);
 
