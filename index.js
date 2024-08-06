@@ -16,6 +16,14 @@ const init = async () => {
 
                 return 'Hello, OpenDurian team!';
             }
+        },
+        {
+            method: 'GET',
+            path: '/random',
+            handler: function (request, h) {
+
+                return `The random is ${Math.random()*10}`;
+            }
         }
     ]);
 
