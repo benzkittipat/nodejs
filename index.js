@@ -14,25 +14,7 @@ const init = async () => {
             path: '/',
             handler: function (request, h) {
 
-                return 'Hello, DevOps Team EGAT!';
-            }
-        },
-        {
-            method: 'GET',
-            path: '/Benzasdfasdf',
-            handler: function (request, h) {
-
-                return Math.random();
-            }
-        },
-        {
-            method: 'GET',
-            path: '/age/{year}',
-            handler: function (request, h) {
-                const birthYear = parseInt(request.params.year);
-                const currentYear = new Date().getFullYear();
-                const age = currentYear - birthYear;
-                return `Your age is ${age} years old`;
+                return 'Hello, OpenDurian team!';
             }
         }
     ]);
