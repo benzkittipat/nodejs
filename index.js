@@ -22,7 +22,7 @@ const init = async () => {
             path: '/random',
             handler: function (request, h) {
 
-                return `The random is ${Math.random()*10} `;
+                return `The random is ${Math.random()*10}`;
             }
         }
     ]);
